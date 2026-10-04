@@ -1,6 +1,6 @@
 # Delegation Control Across Separate Authority Domains
 
-Nelson Trasatti, independent researcher and founder of Squlpt.
+Nelson Trasatti, independent researcher with interests and expertise across several technical fields, including cybersecurity, and a specialization in agentic AI. My current research focuses on AI agents and artificial intelligence.
 
 An executed **deterministic synthetic development pilot**, dated 4 October 2026. Eight authored schedules were executed under three controls using two separate SQLite authority stores per execution. There were **24 executions, zero model calls and no production effects**. These cases are a finite engineering demonstration, not independent model tasks, a reserved scientific campaign or a safety certification.
 
@@ -34,7 +34,7 @@ The stores run on one trusted host in a sequential controlled schedule. Transpor
 
 ## Related work and next study
 
-This extends the engineering question in [Conserving Delegated Authority](https://squlpt.ai/research/conserving-delegated-authority), a bounded empirical working paper with model-generated plans and a shared authority journal. It does not replace or inflate that study's results. The proposed next study would investigate concurrent cross-domain effects, explicit revocation contracts, model-dependent plans and legitimate completion under delayed messages. That campaign has not been run.
+This extends the engineering question in Conserving Delegated Authority, a bounded empirical working paper with model-generated plans and a shared authority journal. It does not replace or inflate that study's results. The proposed next study would investigate concurrent cross-domain effects, explicit revocation contracts, model-dependent plans and legitimate completion under delayed messages. That campaign has not been run.
 
 Individual FG-TIDA contributions: [UC4](https://github.com/FG-TIDA/use-cases/issues/4), [Theme 13 mapping](https://github.com/FG-TIDA/themes/issues/13#issuecomment-5900725441), [Theme 16 mapping](https://github.com/FG-TIDA/themes/issues/16#issuecomment-5900748338). These links identify contributions and collaborators; they do not imply endorsement by the ITU or ownership of other participants' work. No collaborator materials are redistributed here.
 
