@@ -1,0 +1,15 @@
+{
+  "version": "0.1.0-development-pilot",
+  "evidence_kind": "deterministic synthetic development pilot",
+  "conditions": ["admission_snapshot", "local_action_check", "freshness_and_barrier"],
+  "cases": [
+    {"id":"normal","operation":"archive-01","resource":"synthetic/project/document","payload":"synthetic content 01","legitimate_completion_eligible":true,"schedule":["admit","execute"]},
+    {"id":"revoked_delivered","operation":"archive-02","resource":"synthetic/project/document","payload":"synthetic content 02","legitimate_completion_eligible":false,"schedule":["admit","revoke","deliver","ack","execute"]},
+    {"id":"revoked_delayed","operation":"archive-03","resource":"synthetic/project/document","payload":"synthetic content 03","legitimate_completion_eligible":false,"schedule":["admit","revoke","execute","deliver","ack","retry"]},
+    {"id":"revoked_partition","operation":"archive-04","resource":"synthetic/project/document","payload":"synthetic content 04","legitimate_completion_eligible":false,"schedule":["admit","revoke","disconnect","execute","ack","timeout"]},
+    {"id":"authorized_partition","operation":"archive-05","resource":"synthetic/project/document","payload":"synthetic content 05","legitimate_completion_eligible":true,"schedule":["admit","disconnect","execute","timeout"]},
+    {"id":"lost_response_retry","operation":"archive-06","resource":"synthetic/project/document","payload":"synthetic content 06","legitimate_completion_eligible":true,"schedule":["admit","execute_lost_response","retry"]},
+    {"id":"receipt_after_revocation","operation":"archive-07","resource":"synthetic/project/document","payload":"synthetic content 07","legitimate_completion_eligible":true,"schedule":["admit","execute_lost_response","revoke","deliver","ack","retry"]},
+    {"id":"wrong_scope","operation":"archive-08","resource":"synthetic/unrelated/document","payload":"synthetic content 08","legitimate_completion_eligible":false,"schedule":["admit","execute"]}
+  ]
+}

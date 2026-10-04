@@ -1,0 +1,2019 @@
+{
+  "runs": [
+    {
+      "authority_a": [
+        1,
+        1
+      ],
+      "authority_b": [
+        1,
+        1
+      ],
+      "case_id": "normal",
+      "client_received_receipt": true,
+      "durable_archive": [
+        {
+          "effect_seq": 4,
+          "operation": "archive-01",
+          "payload": "synthetic content 01"
+        }
+      ],
+      "events": [
+        {
+          "action": "admit",
+          "kind": "step",
+          "seq": 1
+        },
+        {
+          "allowed": true,
+          "kind": "admission",
+          "seq": 2
+        },
+        {
+          "action": "execute",
+          "kind": "step",
+          "seq": 3
+        },
+        {
+          "kind": "effect",
+          "operation": "archive-01",
+          "payload": "synthetic content 01",
+          "resource": "synthetic/project/document",
+          "seq": 4
+        },
+        {
+          "effect_seq": 4,
+          "kind": "receipt",
+          "operation": "archive-01",
+          "recovered": false,
+          "seq": 5
+        }
+      ],
+      "metrics": {
+        "acknowledgment_delay_steps": null,
+        "duplicate_effects": 0,
+        "effects": 1,
+        "effects_after_ack": 0,
+        "effects_after_request": 0,
+        "false_blocking": 0,
+        "legitimate_completed": 1,
+        "legitimate_eligible": 1,
+        "out_of_scope_effects": 0,
+        "recovered_receipts": 0,
+        "revocation_acknowledged": 0,
+        "revocation_requested": 0
+      },
+      "mode": "admission_snapshot"
+    },
+    {
+      "authority_a": [
+        1,
+        1
+      ],
+      "authority_b": [
+        1,
+        1
+      ],
+      "case_id": "normal",
+      "client_received_receipt": true,
+      "durable_archive": [
+        {
+          "effect_seq": 4,
+          "operation": "archive-01",
+          "payload": "synthetic content 01"
+        }
+      ],
+      "events": [
+        {
+          "action": "admit",
+          "kind": "step",
+          "seq": 1
+        },
+        {
+          "allowed": true,
+          "kind": "admission",
+          "seq": 2
+        },
+        {
+          "action": "execute",
+          "kind": "step",
+          "seq": 3
+        },
+        {
+          "kind": "effect",
+          "operation": "archive-01",
+          "payload": "synthetic content 01",
+          "resource": "synthetic/project/document",
+          "seq": 4
+        },
+        {
+          "effect_seq": 4,
+          "kind": "receipt",
+          "operation": "archive-01",
+          "recovered": false,
+          "seq": 5
+        }
+      ],
+      "metrics": {
+        "acknowledgment_delay_steps": null,
+        "duplicate_effects": 0,
+        "effects": 1,
+        "effects_after_ack": 0,
+        "effects_after_request": 0,
+        "false_blocking": 0,
+        "legitimate_completed": 1,
+        "legitimate_eligible": 1,
+        "out_of_scope_effects": 0,
+        "recovered_receipts": 0,
+        "revocation_acknowledged": 0,
+        "revocation_requested": 0
+      },
+      "mode": "local_action_check"
+    },
+    {
+      "authority_a": [
+        1,
+        1
+      ],
+      "authority_b": [
+        1,
+        1
+      ],
+      "case_id": "normal",
+      "client_received_receipt": true,
+      "durable_archive": [
+        {
+          "effect_seq": 5,
+          "operation": "archive-01",
+          "payload": "synthetic content 01"
+        }
+      ],
+      "events": [
+        {
+          "action": "admit",
+          "kind": "step",
+          "seq": 1
+        },
+        {
+          "allowed": true,
+          "kind": "admission",
+          "seq": 2
+        },
+        {
+          "action": "execute",
+          "kind": "step",
+          "seq": 3
+        },
+        {
+          "active": true,
+          "epoch": 1,
+          "kind": "freshness_observation",
+          "seq": 4
+        },
+        {
+          "kind": "effect",
+          "operation": "archive-01",
+          "payload": "synthetic content 01",
+          "resource": "synthetic/project/document",
+          "seq": 5
+        },
+        {
+          "effect_seq": 5,
+          "kind": "receipt",
+          "operation": "archive-01",
+          "recovered": false,
+          "seq": 6
+        }
+      ],
+      "metrics": {
+        "acknowledgment_delay_steps": null,
+        "duplicate_effects": 0,
+        "effects": 1,
+        "effects_after_ack": 0,
+        "effects_after_request": 0,
+        "false_blocking": 0,
+        "legitimate_completed": 1,
+        "legitimate_eligible": 1,
+        "out_of_scope_effects": 0,
+        "recovered_receipts": 0,
+        "revocation_acknowledged": 0,
+        "revocation_requested": 0
+      },
+      "mode": "freshness_and_barrier"
+    },
+    {
+      "authority_a": [
+        2,
+        0
+      ],
+      "authority_b": [
+        2,
+        0
+      ],
+      "case_id": "revoked_delivered",
+      "client_received_receipt": true,
+      "durable_archive": [
+        {
+          "effect_seq": 10,
+          "operation": "archive-02",
+          "payload": "synthetic content 02"
+        }
+      ],
+      "events": [
+        {
+          "action": "admit",
+          "kind": "step",
+          "seq": 1
+        },
+        {
+          "allowed": true,
+          "kind": "admission",
+          "seq": 2
+        },
+        {
+          "action": "revoke",
+          "kind": "step",
+          "seq": 3
+        },
+        {
+          "epoch": 2,
+          "kind": "revocation_requested",
+          "seq": 4
+        },
+        {
+          "action": "deliver",
+          "kind": "step",
+          "seq": 5
+        },
+        {
+          "active": false,
+          "epoch": 2,
+          "kind": "revocation_delivered",
+          "seq": 6
+        },
+        {
+          "action": "ack",
+          "kind": "step",
+          "seq": 7
+        },
+        {
+          "epoch": 2,
+          "kind": "revocation_acknowledged",
+          "seq": 8
+        },
+        {
+          "action": "execute",
+          "kind": "step",
+          "seq": 9
+        },
+        {
+          "kind": "effect",
+          "operation": "archive-02",
+          "payload": "synthetic content 02",
+          "resource": "synthetic/project/document",
+          "seq": 10
+        },
+        {
+          "effect_seq": 10,
+          "kind": "receipt",
+          "operation": "archive-02",
+          "recovered": false,
+          "seq": 11
+        }
+      ],
+      "metrics": {
+        "acknowledgment_delay_steps": 4,
+        "duplicate_effects": 0,
+        "effects": 1,
+        "effects_after_ack": 1,
+        "effects_after_request": 1,
+        "false_blocking": 0,
+        "legitimate_completed": 0,
+        "legitimate_eligible": 0,
+        "out_of_scope_effects": 0,
+        "recovered_receipts": 0,
+        "revocation_acknowledged": 1,
+        "revocation_requested": 1
+      },
+      "mode": "admission_snapshot"
+    },
+    {
+      "authority_a": [
+        2,
+        0
+      ],
+      "authority_b": [
+        2,
+        0
+      ],
+      "case_id": "revoked_delivered",
+      "client_received_receipt": false,
+      "durable_archive": [],
+      "events": [
+        {
+          "action": "admit",
+          "kind": "step",
+          "seq": 1
+        },
+        {
+          "allowed": true,
+          "kind": "admission",
+          "seq": 2
+        },
+        {
+          "action": "revoke",
+          "kind": "step",
+          "seq": 3
+        },
+        {
+          "epoch": 2,
+          "kind": "revocation_requested",
+          "seq": 4
+        },
+        {
+          "action": "deliver",
+          "kind": "step",
+          "seq": 5
+        },
+        {
+          "active": false,
+          "epoch": 2,
+          "kind": "revocation_delivered",
+          "seq": 6
+        },
+        {
+          "action": "ack",
+          "kind": "step",
+          "seq": 7
+        },
+        {
+          "epoch": 2,
+          "kind": "revocation_acknowledged",
+          "seq": 8
+        },
+        {
+          "action": "execute",
+          "kind": "step",
+          "seq": 9
+        },
+        {
+          "kind": "rejected",
+          "reason": "local_revocation",
+          "seq": 10
+        }
+      ],
+      "metrics": {
+        "acknowledgment_delay_steps": 4,
+        "duplicate_effects": 0,
+        "effects": 0,
+        "effects_after_ack": 0,
+        "effects_after_request": 0,
+        "false_blocking": 0,
+        "legitimate_completed": 0,
+        "legitimate_eligible": 0,
+        "out_of_scope_effects": 0,
+        "recovered_receipts": 0,
+        "revocation_acknowledged": 1,
+        "revocation_requested": 1
+      },
+      "mode": "local_action_check"
+    },
+    {
+      "authority_a": [
+        2,
+        0
+      ],
+      "authority_b": [
+        2,
+        0
+      ],
+      "case_id": "revoked_delivered",
+      "client_received_receipt": false,
+      "durable_archive": [],
+      "events": [
+        {
+          "action": "admit",
+          "kind": "step",
+          "seq": 1
+        },
+        {
+          "allowed": true,
+          "kind": "admission",
+          "seq": 2
+        },
+        {
+          "action": "revoke",
+          "kind": "step",
+          "seq": 3
+        },
+        {
+          "epoch": 2,
+          "kind": "revocation_requested",
+          "seq": 4
+        },
+        {
+          "action": "deliver",
+          "kind": "step",
+          "seq": 5
+        },
+        {
+          "active": false,
+          "epoch": 2,
+          "kind": "revocation_delivered",
+          "seq": 6
+        },
+        {
+          "action": "ack",
+          "kind": "step",
+          "seq": 7
+        },
+        {
+          "epoch": 2,
+          "kind": "revocation_acknowledged",
+          "seq": 8
+        },
+        {
+          "action": "execute",
+          "kind": "step",
+          "seq": 9
+        },
+        {
+          "active": false,
+          "epoch": 2,
+          "kind": "freshness_observation",
+          "seq": 10
+        },
+        {
+          "kind": "rejected",
+          "reason": "root_revocation",
+          "seq": 11
+        }
+      ],
+      "metrics": {
+        "acknowledgment_delay_steps": 4,
+        "duplicate_effects": 0,
+        "effects": 0,
+        "effects_after_ack": 0,
+        "effects_after_request": 0,
+        "false_blocking": 0,
+        "legitimate_completed": 0,
+        "legitimate_eligible": 0,
+        "out_of_scope_effects": 0,
+        "recovered_receipts": 0,
+        "revocation_acknowledged": 1,
+        "revocation_requested": 1
+      },
+      "mode": "freshness_and_barrier"
+    },
+    {
+      "authority_a": [
+        2,
+        0
+      ],
+      "authority_b": [
+        2,
+        0
+      ],
+      "case_id": "revoked_delayed",
+      "client_received_receipt": true,
+      "durable_archive": [
+        {
+          "effect_seq": 6,
+          "operation": "archive-03",
+          "payload": "synthetic content 03"
+        }
+      ],
+      "events": [
+        {
+          "action": "admit",
+          "kind": "step",
+          "seq": 1
+        },
+        {
+          "allowed": true,
+          "kind": "admission",
+          "seq": 2
+        },
+        {
+          "action": "revoke",
+          "kind": "step",
+          "seq": 3
+        },
+        {
+          "epoch": 2,
+          "kind": "revocation_requested",
+          "seq": 4
+        },
+        {
+          "action": "execute",
+          "kind": "step",
+          "seq": 5
+        },
+        {
+          "kind": "effect",
+          "operation": "archive-03",
+          "payload": "synthetic content 03",
+          "resource": "synthetic/project/document",
+          "seq": 6
+        },
+        {
+          "effect_seq": 6,
+          "kind": "receipt",
+          "operation": "archive-03",
+          "recovered": false,
+          "seq": 7
+        },
+        {
+          "action": "deliver",
+          "kind": "step",
+          "seq": 8
+        },
+        {
+          "active": false,
+          "epoch": 2,
+          "kind": "revocation_delivered",
+          "seq": 9
+        },
+        {
+          "action": "ack",
+          "kind": "step",
+          "seq": 10
+        },
+        {
+          "epoch": 2,
+          "kind": "revocation_acknowledged",
+          "seq": 11
+        },
+        {
+          "action": "retry",
+          "kind": "step",
+          "seq": 12
+        },
+        {
+          "effect_seq": 6,
+          "kind": "receipt",
+          "operation": "archive-03",
+          "recovered": true,
+          "seq": 13
+        }
+      ],
+      "metrics": {
+        "acknowledgment_delay_steps": 7,
+        "duplicate_effects": 0,
+        "effects": 1,
+        "effects_after_ack": 0,
+        "effects_after_request": 1,
+        "false_blocking": 0,
+        "legitimate_completed": 0,
+        "legitimate_eligible": 0,
+        "out_of_scope_effects": 0,
+        "recovered_receipts": 1,
+        "revocation_acknowledged": 1,
+        "revocation_requested": 1
+      },
+      "mode": "admission_snapshot"
+    },
+    {
+      "authority_a": [
+        2,
+        0
+      ],
+      "authority_b": [
+        2,
+        0
+      ],
+      "case_id": "revoked_delayed",
+      "client_received_receipt": true,
+      "durable_archive": [
+        {
+          "effect_seq": 6,
+          "operation": "archive-03",
+          "payload": "synthetic content 03"
+        }
+      ],
+      "events": [
+        {
+          "action": "admit",
+          "kind": "step",
+          "seq": 1
+        },
+        {
+          "allowed": true,
+          "kind": "admission",
+          "seq": 2
+        },
+        {
+          "action": "revoke",
+          "kind": "step",
+          "seq": 3
+        },
+        {
+          "epoch": 2,
+          "kind": "revocation_requested",
+          "seq": 4
+        },
+        {
+          "action": "execute",
+          "kind": "step",
+          "seq": 5
+        },
+        {
+          "kind": "effect",
+          "operation": "archive-03",
+          "payload": "synthetic content 03",
+          "resource": "synthetic/project/document",
+          "seq": 6
+        },
+        {
+          "effect_seq": 6,
+          "kind": "receipt",
+          "operation": "archive-03",
+          "recovered": false,
+          "seq": 7
+        },
+        {
+          "action": "deliver",
+          "kind": "step",
+          "seq": 8
+        },
+        {
+          "active": false,
+          "epoch": 2,
+          "kind": "revocation_delivered",
+          "seq": 9
+        },
+        {
+          "action": "ack",
+          "kind": "step",
+          "seq": 10
+        },
+        {
+          "epoch": 2,
+          "kind": "revocation_acknowledged",
+          "seq": 11
+        },
+        {
+          "action": "retry",
+          "kind": "step",
+          "seq": 12
+        },
+        {
+          "effect_seq": 6,
+          "kind": "receipt",
+          "operation": "archive-03",
+          "recovered": true,
+          "seq": 13
+        }
+      ],
+      "metrics": {
+        "acknowledgment_delay_steps": 7,
+        "duplicate_effects": 0,
+        "effects": 1,
+        "effects_after_ack": 0,
+        "effects_after_request": 1,
+        "false_blocking": 0,
+        "legitimate_completed": 0,
+        "legitimate_eligible": 0,
+        "out_of_scope_effects": 0,
+        "recovered_receipts": 1,
+        "revocation_acknowledged": 1,
+        "revocation_requested": 1
+      },
+      "mode": "local_action_check"
+    },
+    {
+      "authority_a": [
+        2,
+        0
+      ],
+      "authority_b": [
+        2,
+        0
+      ],
+      "case_id": "revoked_delayed",
+      "client_received_receipt": false,
+      "durable_archive": [],
+      "events": [
+        {
+          "action": "admit",
+          "kind": "step",
+          "seq": 1
+        },
+        {
+          "allowed": true,
+          "kind": "admission",
+          "seq": 2
+        },
+        {
+          "action": "revoke",
+          "kind": "step",
+          "seq": 3
+        },
+        {
+          "epoch": 2,
+          "kind": "revocation_requested",
+          "seq": 4
+        },
+        {
+          "action": "execute",
+          "kind": "step",
+          "seq": 5
+        },
+        {
+          "active": false,
+          "epoch": 2,
+          "kind": "freshness_observation",
+          "seq": 6
+        },
+        {
+          "kind": "rejected",
+          "reason": "root_revocation",
+          "seq": 7
+        },
+        {
+          "action": "deliver",
+          "kind": "step",
+          "seq": 8
+        },
+        {
+          "active": false,
+          "epoch": 2,
+          "kind": "revocation_delivered",
+          "seq": 9
+        },
+        {
+          "action": "ack",
+          "kind": "step",
+          "seq": 10
+        },
+        {
+          "epoch": 2,
+          "kind": "revocation_acknowledged",
+          "seq": 11
+        },
+        {
+          "action": "retry",
+          "kind": "step",
+          "seq": 12
+        },
+        {
+          "active": false,
+          "epoch": 2,
+          "kind": "freshness_observation",
+          "seq": 13
+        },
+        {
+          "kind": "rejected",
+          "reason": "root_revocation",
+          "seq": 14
+        }
+      ],
+      "metrics": {
+        "acknowledgment_delay_steps": 7,
+        "duplicate_effects": 0,
+        "effects": 0,
+        "effects_after_ack": 0,
+        "effects_after_request": 0,
+        "false_blocking": 0,
+        "legitimate_completed": 0,
+        "legitimate_eligible": 0,
+        "out_of_scope_effects": 0,
+        "recovered_receipts": 0,
+        "revocation_acknowledged": 1,
+        "revocation_requested": 1
+      },
+      "mode": "freshness_and_barrier"
+    },
+    {
+      "authority_a": [
+        2,
+        0
+      ],
+      "authority_b": [
+        1,
+        1
+      ],
+      "case_id": "revoked_partition",
+      "client_received_receipt": true,
+      "durable_archive": [
+        {
+          "effect_seq": 8,
+          "operation": "archive-04",
+          "payload": "synthetic content 04"
+        }
+      ],
+      "events": [
+        {
+          "action": "admit",
+          "kind": "step",
+          "seq": 1
+        },
+        {
+          "allowed": true,
+          "kind": "admission",
+          "seq": 2
+        },
+        {
+          "action": "revoke",
+          "kind": "step",
+          "seq": 3
+        },
+        {
+          "epoch": 2,
+          "kind": "revocation_requested",
+          "seq": 4
+        },
+        {
+          "action": "disconnect",
+          "kind": "step",
+          "seq": 5
+        },
+        {
+          "kind": "partition_started",
+          "seq": 6
+        },
+        {
+          "action": "execute",
+          "kind": "step",
+          "seq": 7
+        },
+        {
+          "kind": "effect",
+          "operation": "archive-04",
+          "payload": "synthetic content 04",
+          "resource": "synthetic/project/document",
+          "seq": 8
+        },
+        {
+          "effect_seq": 8,
+          "kind": "receipt",
+          "operation": "archive-04",
+          "recovered": false,
+          "seq": 9
+        },
+        {
+          "action": "ack",
+          "kind": "step",
+          "seq": 10
+        },
+        {
+          "kind": "acknowledgment_unavailable",
+          "seq": 11
+        },
+        {
+          "action": "timeout",
+          "kind": "step",
+          "seq": 12
+        },
+        {
+          "kind": "observation_horizon_ended",
+          "seq": 13
+        }
+      ],
+      "metrics": {
+        "acknowledgment_delay_steps": null,
+        "duplicate_effects": 0,
+        "effects": 1,
+        "effects_after_ack": 0,
+        "effects_after_request": 1,
+        "false_blocking": 0,
+        "legitimate_completed": 0,
+        "legitimate_eligible": 0,
+        "out_of_scope_effects": 0,
+        "recovered_receipts": 0,
+        "revocation_acknowledged": 0,
+        "revocation_requested": 1
+      },
+      "mode": "admission_snapshot"
+    },
+    {
+      "authority_a": [
+        2,
+        0
+      ],
+      "authority_b": [
+        1,
+        1
+      ],
+      "case_id": "revoked_partition",
+      "client_received_receipt": true,
+      "durable_archive": [
+        {
+          "effect_seq": 8,
+          "operation": "archive-04",
+          "payload": "synthetic content 04"
+        }
+      ],
+      "events": [
+        {
+          "action": "admit",
+          "kind": "step",
+          "seq": 1
+        },
+        {
+          "allowed": true,
+          "kind": "admission",
+          "seq": 2
+        },
+        {
+          "action": "revoke",
+          "kind": "step",
+          "seq": 3
+        },
+        {
+          "epoch": 2,
+          "kind": "revocation_requested",
+          "seq": 4
+        },
+        {
+          "action": "disconnect",
+          "kind": "step",
+          "seq": 5
+        },
+        {
+          "kind": "partition_started",
+          "seq": 6
+        },
+        {
+          "action": "execute",
+          "kind": "step",
+          "seq": 7
+        },
+        {
+          "kind": "effect",
+          "operation": "archive-04",
+          "payload": "synthetic content 04",
+          "resource": "synthetic/project/document",
+          "seq": 8
+        },
+        {
+          "effect_seq": 8,
+          "kind": "receipt",
+          "operation": "archive-04",
+          "recovered": false,
+          "seq": 9
+        },
+        {
+          "action": "ack",
+          "kind": "step",
+          "seq": 10
+        },
+        {
+          "kind": "acknowledgment_unavailable",
+          "seq": 11
+        },
+        {
+          "action": "timeout",
+          "kind": "step",
+          "seq": 12
+        },
+        {
+          "kind": "observation_horizon_ended",
+          "seq": 13
+        }
+      ],
+      "metrics": {
+        "acknowledgment_delay_steps": null,
+        "duplicate_effects": 0,
+        "effects": 1,
+        "effects_after_ack": 0,
+        "effects_after_request": 1,
+        "false_blocking": 0,
+        "legitimate_completed": 0,
+        "legitimate_eligible": 0,
+        "out_of_scope_effects": 0,
+        "recovered_receipts": 0,
+        "revocation_acknowledged": 0,
+        "revocation_requested": 1
+      },
+      "mode": "local_action_check"
+    },
+    {
+      "authority_a": [
+        2,
+        0
+      ],
+      "authority_b": [
+        1,
+        1
+      ],
+      "case_id": "revoked_partition",
+      "client_received_receipt": false,
+      "durable_archive": [],
+      "events": [
+        {
+          "action": "admit",
+          "kind": "step",
+          "seq": 1
+        },
+        {
+          "allowed": true,
+          "kind": "admission",
+          "seq": 2
+        },
+        {
+          "action": "revoke",
+          "kind": "step",
+          "seq": 3
+        },
+        {
+          "epoch": 2,
+          "kind": "revocation_requested",
+          "seq": 4
+        },
+        {
+          "action": "disconnect",
+          "kind": "step",
+          "seq": 5
+        },
+        {
+          "kind": "partition_started",
+          "seq": 6
+        },
+        {
+          "action": "execute",
+          "kind": "step",
+          "seq": 7
+        },
+        {
+          "kind": "rejected",
+          "reason": "freshness_unavailable",
+          "seq": 8
+        },
+        {
+          "action": "ack",
+          "kind": "step",
+          "seq": 9
+        },
+        {
+          "kind": "acknowledgment_unavailable",
+          "seq": 10
+        },
+        {
+          "action": "timeout",
+          "kind": "step",
+          "seq": 11
+        },
+        {
+          "kind": "observation_horizon_ended",
+          "seq": 12
+        }
+      ],
+      "metrics": {
+        "acknowledgment_delay_steps": null,
+        "duplicate_effects": 0,
+        "effects": 0,
+        "effects_after_ack": 0,
+        "effects_after_request": 0,
+        "false_blocking": 0,
+        "legitimate_completed": 0,
+        "legitimate_eligible": 0,
+        "out_of_scope_effects": 0,
+        "recovered_receipts": 0,
+        "revocation_acknowledged": 0,
+        "revocation_requested": 1
+      },
+      "mode": "freshness_and_barrier"
+    },
+    {
+      "authority_a": [
+        1,
+        1
+      ],
+      "authority_b": [
+        1,
+        1
+      ],
+      "case_id": "authorized_partition",
+      "client_received_receipt": true,
+      "durable_archive": [
+        {
+          "effect_seq": 6,
+          "operation": "archive-05",
+          "payload": "synthetic content 05"
+        }
+      ],
+      "events": [
+        {
+          "action": "admit",
+          "kind": "step",
+          "seq": 1
+        },
+        {
+          "allowed": true,
+          "kind": "admission",
+          "seq": 2
+        },
+        {
+          "action": "disconnect",
+          "kind": "step",
+          "seq": 3
+        },
+        {
+          "kind": "partition_started",
+          "seq": 4
+        },
+        {
+          "action": "execute",
+          "kind": "step",
+          "seq": 5
+        },
+        {
+          "kind": "effect",
+          "operation": "archive-05",
+          "payload": "synthetic content 05",
+          "resource": "synthetic/project/document",
+          "seq": 6
+        },
+        {
+          "effect_seq": 6,
+          "kind": "receipt",
+          "operation": "archive-05",
+          "recovered": false,
+          "seq": 7
+        },
+        {
+          "action": "timeout",
+          "kind": "step",
+          "seq": 8
+        },
+        {
+          "kind": "observation_horizon_ended",
+          "seq": 9
+        }
+      ],
+      "metrics": {
+        "acknowledgment_delay_steps": null,
+        "duplicate_effects": 0,
+        "effects": 1,
+        "effects_after_ack": 0,
+        "effects_after_request": 0,
+        "false_blocking": 0,
+        "legitimate_completed": 1,
+        "legitimate_eligible": 1,
+        "out_of_scope_effects": 0,
+        "recovered_receipts": 0,
+        "revocation_acknowledged": 0,
+        "revocation_requested": 0
+      },
+      "mode": "admission_snapshot"
+    },
+    {
+      "authority_a": [
+        1,
+        1
+      ],
+      "authority_b": [
+        1,
+        1
+      ],
+      "case_id": "authorized_partition",
+      "client_received_receipt": true,
+      "durable_archive": [
+        {
+          "effect_seq": 6,
+          "operation": "archive-05",
+          "payload": "synthetic content 05"
+        }
+      ],
+      "events": [
+        {
+          "action": "admit",
+          "kind": "step",
+          "seq": 1
+        },
+        {
+          "allowed": true,
+          "kind": "admission",
+          "seq": 2
+        },
+        {
+          "action": "disconnect",
+          "kind": "step",
+          "seq": 3
+        },
+        {
+          "kind": "partition_started",
+          "seq": 4
+        },
+        {
+          "action": "execute",
+          "kind": "step",
+          "seq": 5
+        },
+        {
+          "kind": "effect",
+          "operation": "archive-05",
+          "payload": "synthetic content 05",
+          "resource": "synthetic/project/document",
+          "seq": 6
+        },
+        {
+          "effect_seq": 6,
+          "kind": "receipt",
+          "operation": "archive-05",
+          "recovered": false,
+          "seq": 7
+        },
+        {
+          "action": "timeout",
+          "kind": "step",
+          "seq": 8
+        },
+        {
+          "kind": "observation_horizon_ended",
+          "seq": 9
+        }
+      ],
+      "metrics": {
+        "acknowledgment_delay_steps": null,
+        "duplicate_effects": 0,
+        "effects": 1,
+        "effects_after_ack": 0,
+        "effects_after_request": 0,
+        "false_blocking": 0,
+        "legitimate_completed": 1,
+        "legitimate_eligible": 1,
+        "out_of_scope_effects": 0,
+        "recovered_receipts": 0,
+        "revocation_acknowledged": 0,
+        "revocation_requested": 0
+      },
+      "mode": "local_action_check"
+    },
+    {
+      "authority_a": [
+        1,
+        1
+      ],
+      "authority_b": [
+        1,
+        1
+      ],
+      "case_id": "authorized_partition",
+      "client_received_receipt": false,
+      "durable_archive": [],
+      "events": [
+        {
+          "action": "admit",
+          "kind": "step",
+          "seq": 1
+        },
+        {
+          "allowed": true,
+          "kind": "admission",
+          "seq": 2
+        },
+        {
+          "action": "disconnect",
+          "kind": "step",
+          "seq": 3
+        },
+        {
+          "kind": "partition_started",
+          "seq": 4
+        },
+        {
+          "action": "execute",
+          "kind": "step",
+          "seq": 5
+        },
+        {
+          "kind": "rejected",
+          "reason": "freshness_unavailable",
+          "seq": 6
+        },
+        {
+          "action": "timeout",
+          "kind": "step",
+          "seq": 7
+        },
+        {
+          "kind": "observation_horizon_ended",
+          "seq": 8
+        }
+      ],
+      "metrics": {
+        "acknowledgment_delay_steps": null,
+        "duplicate_effects": 0,
+        "effects": 0,
+        "effects_after_ack": 0,
+        "effects_after_request": 0,
+        "false_blocking": 1,
+        "legitimate_completed": 0,
+        "legitimate_eligible": 1,
+        "out_of_scope_effects": 0,
+        "recovered_receipts": 0,
+        "revocation_acknowledged": 0,
+        "revocation_requested": 0
+      },
+      "mode": "freshness_and_barrier"
+    },
+    {
+      "authority_a": [
+        1,
+        1
+      ],
+      "authority_b": [
+        1,
+        1
+      ],
+      "case_id": "lost_response_retry",
+      "client_received_receipt": true,
+      "durable_archive": [
+        {
+          "effect_seq": 4,
+          "operation": "archive-06",
+          "payload": "synthetic content 06"
+        }
+      ],
+      "events": [
+        {
+          "action": "admit",
+          "kind": "step",
+          "seq": 1
+        },
+        {
+          "allowed": true,
+          "kind": "admission",
+          "seq": 2
+        },
+        {
+          "action": "execute_lost_response",
+          "kind": "step",
+          "seq": 3
+        },
+        {
+          "kind": "effect",
+          "operation": "archive-06",
+          "payload": "synthetic content 06",
+          "resource": "synthetic/project/document",
+          "seq": 4
+        },
+        {
+          "kind": "response_lost",
+          "operation": "archive-06",
+          "seq": 5
+        },
+        {
+          "action": "retry",
+          "kind": "step",
+          "seq": 6
+        },
+        {
+          "effect_seq": 4,
+          "kind": "receipt",
+          "operation": "archive-06",
+          "recovered": true,
+          "seq": 7
+        }
+      ],
+      "metrics": {
+        "acknowledgment_delay_steps": null,
+        "duplicate_effects": 0,
+        "effects": 1,
+        "effects_after_ack": 0,
+        "effects_after_request": 0,
+        "false_blocking": 0,
+        "legitimate_completed": 1,
+        "legitimate_eligible": 1,
+        "out_of_scope_effects": 0,
+        "recovered_receipts": 1,
+        "revocation_acknowledged": 0,
+        "revocation_requested": 0
+      },
+      "mode": "admission_snapshot"
+    },
+    {
+      "authority_a": [
+        1,
+        1
+      ],
+      "authority_b": [
+        1,
+        1
+      ],
+      "case_id": "lost_response_retry",
+      "client_received_receipt": true,
+      "durable_archive": [
+        {
+          "effect_seq": 4,
+          "operation": "archive-06",
+          "payload": "synthetic content 06"
+        }
+      ],
+      "events": [
+        {
+          "action": "admit",
+          "kind": "step",
+          "seq": 1
+        },
+        {
+          "allowed": true,
+          "kind": "admission",
+          "seq": 2
+        },
+        {
+          "action": "execute_lost_response",
+          "kind": "step",
+          "seq": 3
+        },
+        {
+          "kind": "effect",
+          "operation": "archive-06",
+          "payload": "synthetic content 06",
+          "resource": "synthetic/project/document",
+          "seq": 4
+        },
+        {
+          "kind": "response_lost",
+          "operation": "archive-06",
+          "seq": 5
+        },
+        {
+          "action": "retry",
+          "kind": "step",
+          "seq": 6
+        },
+        {
+          "effect_seq": 4,
+          "kind": "receipt",
+          "operation": "archive-06",
+          "recovered": true,
+          "seq": 7
+        }
+      ],
+      "metrics": {
+        "acknowledgment_delay_steps": null,
+        "duplicate_effects": 0,
+        "effects": 1,
+        "effects_after_ack": 0,
+        "effects_after_request": 0,
+        "false_blocking": 0,
+        "legitimate_completed": 1,
+        "legitimate_eligible": 1,
+        "out_of_scope_effects": 0,
+        "recovered_receipts": 1,
+        "revocation_acknowledged": 0,
+        "revocation_requested": 0
+      },
+      "mode": "local_action_check"
+    },
+    {
+      "authority_a": [
+        1,
+        1
+      ],
+      "authority_b": [
+        1,
+        1
+      ],
+      "case_id": "lost_response_retry",
+      "client_received_receipt": true,
+      "durable_archive": [
+        {
+          "effect_seq": 5,
+          "operation": "archive-06",
+          "payload": "synthetic content 06"
+        }
+      ],
+      "events": [
+        {
+          "action": "admit",
+          "kind": "step",
+          "seq": 1
+        },
+        {
+          "allowed": true,
+          "kind": "admission",
+          "seq": 2
+        },
+        {
+          "action": "execute_lost_response",
+          "kind": "step",
+          "seq": 3
+        },
+        {
+          "active": true,
+          "epoch": 1,
+          "kind": "freshness_observation",
+          "seq": 4
+        },
+        {
+          "kind": "effect",
+          "operation": "archive-06",
+          "payload": "synthetic content 06",
+          "resource": "synthetic/project/document",
+          "seq": 5
+        },
+        {
+          "kind": "response_lost",
+          "operation": "archive-06",
+          "seq": 6
+        },
+        {
+          "action": "retry",
+          "kind": "step",
+          "seq": 7
+        },
+        {
+          "effect_seq": 5,
+          "kind": "receipt",
+          "operation": "archive-06",
+          "recovered": true,
+          "seq": 8
+        }
+      ],
+      "metrics": {
+        "acknowledgment_delay_steps": null,
+        "duplicate_effects": 0,
+        "effects": 1,
+        "effects_after_ack": 0,
+        "effects_after_request": 0,
+        "false_blocking": 0,
+        "legitimate_completed": 1,
+        "legitimate_eligible": 1,
+        "out_of_scope_effects": 0,
+        "recovered_receipts": 1,
+        "revocation_acknowledged": 0,
+        "revocation_requested": 0
+      },
+      "mode": "freshness_and_barrier"
+    },
+    {
+      "authority_a": [
+        2,
+        0
+      ],
+      "authority_b": [
+        2,
+        0
+      ],
+      "case_id": "receipt_after_revocation",
+      "client_received_receipt": true,
+      "durable_archive": [
+        {
+          "effect_seq": 4,
+          "operation": "archive-07",
+          "payload": "synthetic content 07"
+        }
+      ],
+      "events": [
+        {
+          "action": "admit",
+          "kind": "step",
+          "seq": 1
+        },
+        {
+          "allowed": true,
+          "kind": "admission",
+          "seq": 2
+        },
+        {
+          "action": "execute_lost_response",
+          "kind": "step",
+          "seq": 3
+        },
+        {
+          "kind": "effect",
+          "operation": "archive-07",
+          "payload": "synthetic content 07",
+          "resource": "synthetic/project/document",
+          "seq": 4
+        },
+        {
+          "kind": "response_lost",
+          "operation": "archive-07",
+          "seq": 5
+        },
+        {
+          "action": "revoke",
+          "kind": "step",
+          "seq": 6
+        },
+        {
+          "epoch": 2,
+          "kind": "revocation_requested",
+          "seq": 7
+        },
+        {
+          "action": "deliver",
+          "kind": "step",
+          "seq": 8
+        },
+        {
+          "active": false,
+          "epoch": 2,
+          "kind": "revocation_delivered",
+          "seq": 9
+        },
+        {
+          "action": "ack",
+          "kind": "step",
+          "seq": 10
+        },
+        {
+          "epoch": 2,
+          "kind": "revocation_acknowledged",
+          "seq": 11
+        },
+        {
+          "action": "retry",
+          "kind": "step",
+          "seq": 12
+        },
+        {
+          "effect_seq": 4,
+          "kind": "receipt",
+          "operation": "archive-07",
+          "recovered": true,
+          "seq": 13
+        }
+      ],
+      "metrics": {
+        "acknowledgment_delay_steps": 4,
+        "duplicate_effects": 0,
+        "effects": 1,
+        "effects_after_ack": 0,
+        "effects_after_request": 0,
+        "false_blocking": 0,
+        "legitimate_completed": 1,
+        "legitimate_eligible": 1,
+        "out_of_scope_effects": 0,
+        "recovered_receipts": 1,
+        "revocation_acknowledged": 1,
+        "revocation_requested": 1
+      },
+      "mode": "admission_snapshot"
+    },
+    {
+      "authority_a": [
+        2,
+        0
+      ],
+      "authority_b": [
+        2,
+        0
+      ],
+      "case_id": "receipt_after_revocation",
+      "client_received_receipt": true,
+      "durable_archive": [
+        {
+          "effect_seq": 4,
+          "operation": "archive-07",
+          "payload": "synthetic content 07"
+        }
+      ],
+      "events": [
+        {
+          "action": "admit",
+          "kind": "step",
+          "seq": 1
+        },
+        {
+          "allowed": true,
+          "kind": "admission",
+          "seq": 2
+        },
+        {
+          "action": "execute_lost_response",
+          "kind": "step",
+          "seq": 3
+        },
+        {
+          "kind": "effect",
+          "operation": "archive-07",
+          "payload": "synthetic content 07",
+          "resource": "synthetic/project/document",
+          "seq": 4
+        },
+        {
+          "kind": "response_lost",
+          "operation": "archive-07",
+          "seq": 5
+        },
+        {
+          "action": "revoke",
+          "kind": "step",
+          "seq": 6
+        },
+        {
+          "epoch": 2,
+          "kind": "revocation_requested",
+          "seq": 7
+        },
+        {
+          "action": "deliver",
+          "kind": "step",
+          "seq": 8
+        },
+        {
+          "active": false,
+          "epoch": 2,
+          "kind": "revocation_delivered",
+          "seq": 9
+        },
+        {
+          "action": "ack",
+          "kind": "step",
+          "seq": 10
+        },
+        {
+          "epoch": 2,
+          "kind": "revocation_acknowledged",
+          "seq": 11
+        },
+        {
+          "action": "retry",
+          "kind": "step",
+          "seq": 12
+        },
+        {
+          "effect_seq": 4,
+          "kind": "receipt",
+          "operation": "archive-07",
+          "recovered": true,
+          "seq": 13
+        }
+      ],
+      "metrics": {
+        "acknowledgment_delay_steps": 4,
+        "duplicate_effects": 0,
+        "effects": 1,
+        "effects_after_ack": 0,
+        "effects_after_request": 0,
+        "false_blocking": 0,
+        "legitimate_completed": 1,
+        "legitimate_eligible": 1,
+        "out_of_scope_effects": 0,
+        "recovered_receipts": 1,
+        "revocation_acknowledged": 1,
+        "revocation_requested": 1
+      },
+      "mode": "local_action_check"
+    },
+    {
+      "authority_a": [
+        2,
+        0
+      ],
+      "authority_b": [
+        2,
+        0
+      ],
+      "case_id": "receipt_after_revocation",
+      "client_received_receipt": true,
+      "durable_archive": [
+        {
+          "effect_seq": 5,
+          "operation": "archive-07",
+          "payload": "synthetic content 07"
+        }
+      ],
+      "events": [
+        {
+          "action": "admit",
+          "kind": "step",
+          "seq": 1
+        },
+        {
+          "allowed": true,
+          "kind": "admission",
+          "seq": 2
+        },
+        {
+          "action": "execute_lost_response",
+          "kind": "step",
+          "seq": 3
+        },
+        {
+          "active": true,
+          "epoch": 1,
+          "kind": "freshness_observation",
+          "seq": 4
+        },
+        {
+          "kind": "effect",
+          "operation": "archive-07",
+          "payload": "synthetic content 07",
+          "resource": "synthetic/project/document",
+          "seq": 5
+        },
+        {
+          "kind": "response_lost",
+          "operation": "archive-07",
+          "seq": 6
+        },
+        {
+          "action": "revoke",
+          "kind": "step",
+          "seq": 7
+        },
+        {
+          "epoch": 2,
+          "kind": "revocation_requested",
+          "seq": 8
+        },
+        {
+          "action": "deliver",
+          "kind": "step",
+          "seq": 9
+        },
+        {
+          "active": false,
+          "epoch": 2,
+          "kind": "revocation_delivered",
+          "seq": 10
+        },
+        {
+          "action": "ack",
+          "kind": "step",
+          "seq": 11
+        },
+        {
+          "epoch": 2,
+          "kind": "revocation_acknowledged",
+          "seq": 12
+        },
+        {
+          "action": "retry",
+          "kind": "step",
+          "seq": 13
+        },
+        {
+          "effect_seq": 5,
+          "kind": "receipt",
+          "operation": "archive-07",
+          "recovered": true,
+          "seq": 14
+        }
+      ],
+      "metrics": {
+        "acknowledgment_delay_steps": 4,
+        "duplicate_effects": 0,
+        "effects": 1,
+        "effects_after_ack": 0,
+        "effects_after_request": 0,
+        "false_blocking": 0,
+        "legitimate_completed": 1,
+        "legitimate_eligible": 1,
+        "out_of_scope_effects": 0,
+        "recovered_receipts": 1,
+        "revocation_acknowledged": 1,
+        "revocation_requested": 1
+      },
+      "mode": "freshness_and_barrier"
+    },
+    {
+      "authority_a": [
+        1,
+        1
+      ],
+      "authority_b": [
+        1,
+        1
+      ],
+      "case_id": "wrong_scope",
+      "client_received_receipt": false,
+      "durable_archive": [],
+      "events": [
+        {
+          "action": "admit",
+          "kind": "step",
+          "seq": 1
+        },
+        {
+          "allowed": true,
+          "kind": "admission",
+          "seq": 2
+        },
+        {
+          "action": "execute",
+          "kind": "step",
+          "seq": 3
+        },
+        {
+          "kind": "rejected",
+          "reason": "scope",
+          "seq": 4
+        }
+      ],
+      "metrics": {
+        "acknowledgment_delay_steps": null,
+        "duplicate_effects": 0,
+        "effects": 0,
+        "effects_after_ack": 0,
+        "effects_after_request": 0,
+        "false_blocking": 0,
+        "legitimate_completed": 0,
+        "legitimate_eligible": 0,
+        "out_of_scope_effects": 0,
+        "recovered_receipts": 0,
+        "revocation_acknowledged": 0,
+        "revocation_requested": 0
+      },
+      "mode": "admission_snapshot"
+    },
+    {
+      "authority_a": [
+        1,
+        1
+      ],
+      "authority_b": [
+        1,
+        1
+      ],
+      "case_id": "wrong_scope",
+      "client_received_receipt": false,
+      "durable_archive": [],
+      "events": [
+        {
+          "action": "admit",
+          "kind": "step",
+          "seq": 1
+        },
+        {
+          "allowed": true,
+          "kind": "admission",
+          "seq": 2
+        },
+        {
+          "action": "execute",
+          "kind": "step",
+          "seq": 3
+        },
+        {
+          "kind": "rejected",
+          "reason": "scope",
+          "seq": 4
+        }
+      ],
+      "metrics": {
+        "acknowledgment_delay_steps": null,
+        "duplicate_effects": 0,
+        "effects": 0,
+        "effects_after_ack": 0,
+        "effects_after_request": 0,
+        "false_blocking": 0,
+        "legitimate_completed": 0,
+        "legitimate_eligible": 0,
+        "out_of_scope_effects": 0,
+        "recovered_receipts": 0,
+        "revocation_acknowledged": 0,
+        "revocation_requested": 0
+      },
+      "mode": "local_action_check"
+    },
+    {
+      "authority_a": [
+        1,
+        1
+      ],
+      "authority_b": [
+        1,
+        1
+      ],
+      "case_id": "wrong_scope",
+      "client_received_receipt": false,
+      "durable_archive": [],
+      "events": [
+        {
+          "action": "admit",
+          "kind": "step",
+          "seq": 1
+        },
+        {
+          "allowed": true,
+          "kind": "admission",
+          "seq": 2
+        },
+        {
+          "action": "execute",
+          "kind": "step",
+          "seq": 3
+        },
+        {
+          "kind": "rejected",
+          "reason": "scope",
+          "seq": 4
+        }
+      ],
+      "metrics": {
+        "acknowledgment_delay_steps": null,
+        "duplicate_effects": 0,
+        "effects": 0,
+        "effects_after_ack": 0,
+        "effects_after_request": 0,
+        "false_blocking": 0,
+        "legitimate_completed": 0,
+        "legitimate_eligible": 0,
+        "out_of_scope_effects": 0,
+        "recovered_receipts": 0,
+        "revocation_acknowledged": 0,
+        "revocation_requested": 0
+      },
+      "mode": "freshness_and_barrier"
+    }
+  ],
+  "schema_version": 1
+}

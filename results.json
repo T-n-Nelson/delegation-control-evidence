@@ -1,0 +1,48 @@
+{
+  "cases": 8,
+  "evidence_kind": "executed deterministic synthetic pilot",
+  "executions": 24,
+  "independent_model_tasks": 0,
+  "model_calls": 0,
+  "summary": {
+    "admission_snapshot": {
+      "duplicate_effects": 0,
+      "effects": 7,
+      "effects_after_ack": 1,
+      "effects_after_request": 3,
+      "false_blocking": 0,
+      "legitimate_completed": 4,
+      "legitimate_eligible": 4,
+      "out_of_scope_effects": 0,
+      "recovered_receipts": 3,
+      "revocation_acknowledged": 3,
+      "revocation_requested": 4
+    },
+    "freshness_and_barrier": {
+      "duplicate_effects": 0,
+      "effects": 3,
+      "effects_after_ack": 0,
+      "effects_after_request": 0,
+      "false_blocking": 1,
+      "legitimate_completed": 3,
+      "legitimate_eligible": 4,
+      "out_of_scope_effects": 0,
+      "recovered_receipts": 2,
+      "revocation_acknowledged": 3,
+      "revocation_requested": 4
+    },
+    "local_action_check": {
+      "duplicate_effects": 0,
+      "effects": 6,
+      "effects_after_ack": 0,
+      "effects_after_request": 2,
+      "false_blocking": 0,
+      "legitimate_completed": 4,
+      "legitimate_eligible": 4,
+      "out_of_scope_effects": 0,
+      "recovered_receipts": 3,
+      "revocation_acknowledged": 3,
+      "revocation_requested": 4
+    }
+  }
+}
