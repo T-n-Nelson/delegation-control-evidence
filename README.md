@@ -22,6 +22,8 @@ python verify.py
 
 The checker reads local files only. It checks file hashes, case/condition coverage, recorded event ordering, correspondence between effects and exported durable rows, receipt references, and independently recalculates the metrics. It imports no private runtime, uses no model, and makes no network call.
 
+The repository's `.gitattributes` preserves exact file bytes on Windows and other systems. Do not apply automatic line-ending conversion or format the evidence files before verification.
+
 `protocol.json` contains every synthetic input and schedule. `runs.json` contains complete exported observations and events for all 24 executions. `results.json` contains aggregate counts. `execution.json` identifies the protocol and private runner hashes and execution times. `manifest.json` covers every public file except itself.
 
 ## Boundaries
